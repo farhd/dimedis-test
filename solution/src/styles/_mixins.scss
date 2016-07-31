@@ -1,0 +1,29 @@
+/*** Breakpoints ***/
+
+$large:	    	1024px;
+$medium:  		960px;
+$small:	    	640px;
+
+$breakpoints: (
+	large-up		  "all and (min-width: #{$medium})",
+	large         "all and (min-width: #{$medium}) and (max-width: #{$large})",
+  medium-up    	"all and (min-width: #{$small})",
+  medium        "all and (min-width: #{$small}) and (max-width: #{$medium})",
+  small-up      "all and (min-width: 0px)",
+	small         "all and (max-width: #{$small})",
+  retina        "all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)"
+);
+
+@function getMediaQuery($name) {
+    @each $breakpoint in $breakpoints {
+        @if nth($breakpoint, 1) == $name {
+            @return nth($breakpoint, 2);
+        }
+    }
+    @return "all";
+}
+@mixin breakpoint($point) {
+    @media #{getMediaQuery($point)} {
+		@content;		
+    }
+}

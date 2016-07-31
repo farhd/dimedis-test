@@ -42,7 +42,7 @@ var babelConf = {
 
 // Templates
 gulp.task('tpls', function() {
-  return gulp.src('./src/*.html')
+  return gulp.src('./src/views/index.html')
     .pipe(swig())
     .pipe(gulp.dest('./dist/'))
 })
@@ -113,9 +113,9 @@ gulp.task('default', function() {
 })
 
 gulp.task('watch', function() {
-  gulp.watch('*.html', ['tpls'])
-  gulp.watch('*.scss', ['styles'])
-  gulp.watch('*.js', ['scripts'])
+  gulp.watch('./src/**/*.html', ['tpls'])
+  gulp.watch('./src/**/*.scss', ['styles'])
+  gulp.watch('./src/**/*.js', ['scripts'])
 })
 
 gulp.task('default', ['watch'])

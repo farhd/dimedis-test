@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@media only screen and (min-width: 960px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+}
+
+body {
+    background-color: #bcbcbc;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+.di-head-brand {
+    float: left;
+}
+
+.di-head-nav {
+    float: right;
+
+    li {
+        padding: 5px;
+    }
+
+    .is-active a {
+        text-decoration: underline;
+    }
+}
+
+.di-filter-title {
+    float: left;
+    margin-right: 20px;
+}
+
+.di-badge {
+    padding: 2px 8px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.di-veggie {
+    background-color: green; 
+    color: #fff;
+}
+.di-fruit {
+    background-color: orange; 
+}
+.di-meat {
+    background-color: red;
+    color: #fff;
+}
