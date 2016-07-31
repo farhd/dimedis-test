@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "puer -p 9000 -d ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

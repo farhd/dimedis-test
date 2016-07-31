@@ -1,42 +1,75 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@media only screen and (min-width: 960px) {
-    .wrapper {
-        width: 960px;
+.wrapper {
+    max-width: 1160px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media #{$lg-up} {
         margin: 0 auto;
-        padding: 20px 0;
     }
 }
 
-body {
-    background-color: #bcbcbc;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.di-head {
+    @media #{$lg-up} {
+        margin-top: 30px;
+    }
 }
 
-a {
-    color: #000;
-    text-decoration: none;
+.di-main {
+    margin-top: 20px;
 }
 
-a:focus,
-a:hover {
-    text-decoration: underline;
+.di-footer {
+    margin-bottom: 30px;
 }
 
 .di-head-brand {
-    float: left;
+    @media #{$lg-up} {
+        float: left;
+    }
 }
 
 .di-head-nav {
-    float: right;
+    display: none;
+
+    @media #{$lg-up} {
+        display: block;
+        float: right;
+    }
 
     li {
         padding: 5px;
+        text-align: center;
+        width: 100%;
+
+        @media #{$lg-up} {
+            width: auto;
+        }
     }
 
     .is-active a {
         text-decoration: underline;
+    }
+}
+
+.di-head-btn {
+    float: right;
+
+    .is-on:before {
+        background-color: #bcbcbc;
+        content: '\2212';
+        display: block;
+        position: absolute;
+        height: 24px;
+    }
+
+    @media #{$lg-up} {
+        display: none;
     }
 }
 
@@ -53,13 +86,48 @@ a:hover {
 }
 
 .di-veggie {
-    background-color: green; 
+    background-color: $cFruit; 
     color: #fff;
 }
 .di-fruit {
-    background-color: orange; 
+    background-color: $cVeggie; 
 }
 .di-meat {
-    background-color: red;
+    background-color: $cMeat;
     color: #fff;
+}
+
+.di-results {
+    margin-top: 20px;
+}
+
+.di-card {
+    border: 0;
+
+    &, 
+    & img {
+        border-radius: 0 !important;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.di-arrow {
+    position: relative;
+    top: -2px;
+
+    &--fruit {
+        @extend .di-arrow;
+        color: $cFruit;
+    }
+    &--veggie {
+        @extend .di-arrow;
+        color: $cVeggie;
+    }
+    &--meat {
+        @extend .di-arrow;
+        color: $cMeat;
+    }
 }
