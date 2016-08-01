@@ -1,6 +1,7 @@
 # Installation
 To build package, run:
 ```
+npm install
 gulp build
 ```
 
