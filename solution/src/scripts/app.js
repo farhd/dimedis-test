@@ -5,13 +5,12 @@ Vue.config.delimiters = ['<%', '%>']
 let app = new Vue({
     el: '#app',
     data: {
-        menuOn: true
+        menuOn: false
     },
     methods: {
         toggleMenu: function() {
-            menuOn.copy = !this.menuOn
+            this.menuOn = !this.menuOn
+            console.log(this.menuOn)
         }
     }
 })
-
-console.log(app)

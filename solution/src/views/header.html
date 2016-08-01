@@ -1,6 +1,14 @@
 <header class="di-head wrapper clearfix">
     <img class="di-head-brand" src="./img/header_desk_de.png" alt="Brand logo">
-    <nav class="di-head-nav">
+
+    <span class="di-head-btn">
+        <button class="btn btn-sm <% menuOn ? 'is-on' : 'is-off' %>" 
+            @click="toggleMenu">
+            &#43;
+        </button>
+    </span>
+
+    <nav class="di-head-nav <% menuOn ? 'is-on' : 'is-off' %>">
         <ul class="list-horizontal clearfix">
             <li class="is-active"><a href="#">menu-item 1</a></li>
             <li><a href="#">menu-item 2</a></li>
@@ -10,8 +18,4 @@
             <li><a href="#">menu-item 6</a></li>
         </ul>
     </nav>
-    
-    <span class="di-head-btn">
-        <button class="btn btn-sm is-on">&#43;</button>
-    </span>
 </header>
