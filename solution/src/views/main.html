@@ -17,7 +17,8 @@
     <div class="di-results clearfix columns">
         <div class="col-xs-12">
             {% for item in list %}
-            <div class="column col-xs-12 col-sm-6 col-md-3 float-left">
+            <div class="column col-xs-12 col-sm-6 col-md-3 float-left"
+                v-show="{{ item.type }}">
                 {% include 'card.html' with { 'data': item } %}
             </div>
             {% endfor %}

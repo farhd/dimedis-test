@@ -4,19 +4,22 @@
     <ul class="list-horizontal clearfix">
         <li>
             <span class="di-meat di-badge">
-                <input id="meat" type="checkbox" checked>
+                <input id="meat" type="checkbox" checked
+                    v-model="meat">
                 <label for="meat">Fleisch</label>
             </span>
         </li>
         <li>
             <span class="di-veggie di-badge">
-                <input id="veggie" type="checkbox" checked>
+                <input id="veggie" type="checkbox" checked
+                    v-model="veggie">
                 <label for="veggie">Gemüse</label>
             </span>
         </li>
         <li>
             <span class="di-fruit di-badge">
-                <input id="fruit" type="checkbox" checked>
+                <input id="fruit" type="checkbox" checked
+                    v-model="fruit">
                 <label for="fruit">Obst</label>
             </span>
         </li>
