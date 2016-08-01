@@ -20,13 +20,15 @@
     <img class="di-head-brand" src="./img/header_desk_de.png" alt="Brand logo">
 
     <span class="di-head-btn">
-        <button class="btn btn-sm <% menuOn ? 'is-on' : 'is-off' %>" 
-            @click="toggleMenu">
+        <button class="btn btn-sm" 
+            @click="toggleMenu"
+            v-bind:class="{'is-on': menuOn}">
             &#43;
         </button>
     </span>
 
-    <nav class="di-head-nav <% menuOn ? 'is-on' : 'is-off' %>">
+    <nav class="di-head-nav"
+        v-bind:class="{'is-on': menuOn}">
         <ul class="list-horizontal clearfix">
             <li class="is-active"><a href="#">menu-item 1</a></li>
             <li><a href="#">menu-item 2</a></li>
